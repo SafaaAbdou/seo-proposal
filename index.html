@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahaandqashou.net SEO Strategy Report</title>
+    <style>
+        @page { margin: 2cm; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7; 
+            color: #1a1a1a;
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .cover-page {
+            text-align: center;
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #2d5016 0%, #5a8c2e 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            page-break-after: always;
+        }
+        .cover-page h1 { font-size: 3em; margin-bottom: 25px; font-weight: 700; }
+        .cover-page h2 { font-size: 2.2em; margin-bottom: 20px; font-weight: 400; }
+        .cover-page p { font-size: 1.15em; margin: 12px 0; opacity: 0.95; }
+        h1 { color: #2d5016; font-size: 2.2em; margin: 40px 0 20px 0; border-bottom: 4px solid #5a8c2e; padding-bottom: 15px; }
+        h2 { color: #3d6b1f; font-size: 1.7em; margin: 30px 0 15px 0; }
+        h3 { color: #1a1a1a; font-size: 1.3em; margin: 25px 0 12px 0; }
+        p { margin: 12px 0; text-align: justify; }
+        ul, ol { margin: 12px 0 12px 30px; }
+        li { margin: 10px 0; line-height: 1.8; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 25px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th { 
+            background: linear-gradient(135deg, #2d5016 0%, #5a8c2e 100%);
+            color: white; 
+            padding: 16px; 
+            text-align: left; 
+            font-weight: 600;
+        }
+        td { padding: 14px; border: 1px solid #e0e0e0; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        .critical-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-left: 5px solid #dc3545;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #f0fff4 0%, #e8f5e9 100%);
+            border-left: 5px solid #5a8c2e;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fffbf0 0%, #fff8e1 100%);
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #5a8c2e;
+            box-shadow: 0 4px 15px rgba(90,140,46,0.1);
+        }
+        .metric-card strong { color: #2d5016; font-size: 2em; display: block; margin-bottom: 8px; }
+        .page-break { page-break-before: always; }
+        .print-button {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #2d5016 0%, #5a8c2e 100%);
+            color: white;
+            padding: 16px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05em;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(45,80,22,0.4);
+            z-index: 1000;
+            font-weight: 600;
+        }
+        @media print { .print-button { display: none; } }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .badge-critical { background: #fee; color: #c00; }
+        .badge-high { background: #fff4e0; color: #f39c12; }
+        .badge-medium { background: #e3f2fd; color: #2196f3; }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">📄 Export as PDF</button>
+
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <h1>SEO STRATEGY REPORT</h1>
+        <h2>Tahaandqashou.net</h2>
+        <p style="font-size: 1.3em; margin: 20px 0;">طه وقاشو للمستلزمات الزراعية - Comprehensive Technical Audit & Growth Roadmap</p>
+        <p style="font-size: 1.1em;">Target Market: Jordan</p>
+        <p style="font-size: 1em;">Niche: Agriculture Supplies - Fertilizers, Seeds, Pesticides & Gardening Tools</p>
+        <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 10px; margin-top: 50px;">
+            <p style="font-size: 1.15em; margin-bottom: 12px;">Prepared By</p>
+            <h2 style="margin: 10px 0;">Safaa Abdou</h2>
+            <p style="font-size: 1em; margin-top: 12px;">Technical SEO & Automation Engineer</p>
+            <p style="font-size: 0.95em; margin-top: 25px;">January 2026 | Confidential Document</p>
+        </div>
+    </div>
+
+    <!-- SECTION 1: EXECUTIVE SUMMARY -->
+    <div class="page-break"></div>
+    <h1>1. 📊 Executive Summary</h1>
+
+    <p>This comprehensive SEO strategy report presents a data-driven roadmap for Tahaandqashou.net to achieve dominant positioning in Jordan's agriculture supplies market. Based on detailed technical audits (SEMrush + Screaming Frog), competitor analysis, and market research, we have identified critical opportunities and developed a prioritized 90-day action plan.</p>
+
+    <h2>🔴 Critical Issues Identified</h2>
+    <div class="critical-box">
+        <h3>⚠️ Site Performance & Accessibility Crisis</h3>
+        <ul>
+            <li><strong>Mobile Performance Score: 56/100</strong> - critically poor (First Contentful Paint: 6.7s, Largest Contentful Paint: 7.4s)</li>
+            <li><strong>Desktop Performance: 76/100</strong> - needs improvement (FCP: 2.0s, LCP: 2.0s)</li>
+            <li><strong>Core Web Vitals:</strong> Failing mobile experience affecting rankings and user experience</li>
+        </ul>
+
+        <h3>🔧 Technical SEO Failures</h3>
+        <ul>
+            <li><strong>Crawlability Issues:</strong> 29 pages couldn't be crawled (critical indexation problem)</li>
+            <li><strong>Page Speed:</strong> 21 pages have slow load speed</li>
+            <li><strong>Hreflang Errors:</strong> 2 issues with incorrect hreflang implementation (185 URLs affected - 15.6%)</li>
+            <li><strong>Security:</strong> Missing Content-Security-Policy header (1,732 URLs - 78.7%)</li>
+            <li><strong>Content Quality:</strong> Low content pages (321 pages - 27.1%)</li>
+            <li><strong>On-Page Issues:</strong> Duplicate page titles (100 pages - 8.4%), missing H1 tags (11 pages)</li>
+        </ul>
+
+        <h3>📉 Authority & Visibility Issues</h3>
+        <ul>
+            <li><strong>Authority Score: 16/100</strong> - below average</li>
+            <li><strong>Organic Traffic: 442/month</strong> - low for market potential</li>
+            <li><strong>Organic Keywords: 15</strong> - severely limited visibility</li>
+            <li><strong>Backlinks: 140 total</strong> from 108 referring domains</li>
+            <li><strong>Traffic Share: 82%</strong> - good engagement but low volume</li>
+        </ul>
+    </div>
+
+    <h2>📈 Current Performance Baseline</h2>
+    <div class="metric-grid">
+        <div class="metric-card">
+            <strong>442/month</strong>
+            <span>Organic Traffic</span>
+        </div>
+        <div class="metric-card">
+            <strong>15 Keywords</strong>
+            <span>Ranking (down 6.25%)</span>
+        </div>
+        <div class="metric-card">
+            <strong>Authority: 16</strong>
+            <span>108 Referring Domains</span>
+        </div>
+        <div class="metric-card">
+            <strong>56/100</strong>
+            <span>Mobile Performance</span>
+        </div>
+    </div>
+
+    <h2>🎯 90-Day Targets</h2>
+    <div class="success-box">
+        <ul>
+            <li><strong>Organic Traffic:</strong> 1,200-1,800/month (+170-300% increase)</li>
+            <li><strong>Keywords Ranking:</strong> 80-120 keywords (targeting commercial agriculture terms)</li>
+            <li><strong>Authority Score:</strong> 25-30 (+56-87% improvement)</li>
+            <li><strong>Mobile Performance:</strong> 80+ score</li>
+            <li><strong>Desktop Performance:</strong> 90+ score</li>
+            <li><strong>Qualified Leads:</strong> 40-60/month from organic search</li>
+            <li><strong>Top 10 Rankings:</strong> 20-30 commercial keywords</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 2: SITE & NICHE BRIEF -->
+    <div class="page-break"></div>
+    <h1>2. 🌍 Site & Niche Brief</h1>
+
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Details</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td><strong>Primary Domain</strong></td>
+            <td>tahaandqashou.net</td>
+            <td><span class="status-badge badge-high">Requires Optimization</span></td>
+        </tr>
+        <tr>
+            <td><strong>Target Market</strong></td>
+            <td>Jordan (Primary: Amman, Zarqa, Irbid, Eastern Regions)</td>
+            <td><span class="status-badge badge-medium">Primary</span></td>
+        </tr>
+        <tr>
+            <td><strong>Languages</strong></td>
+            <td>Arabic (Primary), English (Secondary)</td>
+            <td><span class="status-badge badge-medium">Bilingual Strategy</span></td>
+        </tr>
+        <tr>
+            <td><strong>Business Model</strong></td>
+            <td>B2B/B2C: Agriculture supplies, fertilizers, seeds, pesticides, tools</td>
+            <td><span class="status-badge badge-medium">E-commerce</span></td>
+        </tr>
+        <tr>
+            <td><strong>Key Products</strong></td>
+            <td>NPK Fertilizers, Organic Fertilizers, Seeds, Pesticides, Gardening Tools</td>
+            <td><span class="status-badge badge-medium">Active</span></td>
+        </tr>
+        <tr>
+            <td><strong>Heritage</strong></td>
+            <td>Since 1979 - 45+ years of expertise</td>
+            <td><span class="status-badge badge-medium">Trust Signal</span></td>
+        </tr>
+    </table>
+
+    <h2>🏆 Competitive Landscape - Top 5 Competitors</h2>
+    <table>
+        <tr>
+            <th>Competitor</th>
+            <th>Domain Authority</th>
+            <th>Monthly Traffic</th>
+            <th>Strengths</th>
+            <th>Our Advantage Opportunity</th>
+        </tr>
+        <tr>
+            <td><strong>mcfp.jo</strong></td>
+            <td>~40-45</td>
+            <td>2K-5K</td>
+            <td>Strong NPK/fertilizer focus, technical specs, Jordan focus</td>
+            <td>Better e-commerce UX, broader product range, heritage (since 1979)</td>
+        </tr>
+        <tr>
+            <td><strong>jooury.com</strong></td>
+            <td>~35</td>
+            <td>1K-3K</td>
+            <td>Educational blogs, testimonials, Amman presence</td>
+            <td>Superior technical SEO, better mobile experience, comprehensive catalog</td>
+        </tr>
+        <tr>
+            <td><strong>hipposseeds.com</strong></td>
+            <td>~45</td>
+            <td>1.5K-4K</td>
+            <td>Seeds/fertilizers/pesticides, quality backlinks (300+)</td>
+            <td>45-year heritage, Masterblend NPK specialization, tools integration</td>
+        </tr>
+        <tr>
+            <td><strong>alanfal.net</strong></td>
+            <td>~50</td>
+            <td>3K-6K</td>
+            <td>Export focus, specialty fertilizers, certifications</td>
+            <td>Local Jordan focus, e-commerce conversion, customer service</td>
+        </tr>
+        <tr>
+            <td><strong>nabteh.com</strong></td>
+            <td>~40</td>
+            <td>2K-4K</td>
+            <td>E-commerce excellence, gardening tools, customer reviews</td>
+            <td>Professional agriculture focus (vs hobbyist), bulk sales, technical expertise</td>
+        </tr>
+    </table>
+
+    <h2>🎯 Niche Analysis: Agriculture Supplies (Jordan)</h2>
+    <div class="highlight-box">
+        <h3>Market Opportunity:</h3>
+        <ul>
+            <li><strong>High Search Volume:</strong> Primary keywords have 400-1,500+ monthly searches in Jordan</li>
+            <li><strong>Commercial Intent:</strong> Majority of searches are transactional (farmers/gardeners looking to buy)</li>
+            <li><strong>Moderate Competition:</strong> Most competitors have DA 35-50 range (achievable within 6 months)</li>
+            <li><strong>Seasonal Peaks:</strong> Strong demand in spring (March-May) and autumn (September-November)</li>
+            <li><strong>Heritage Leverage:</strong> "Since 1979" is a significant trust signal for agricultural buyers</li>
+            <li><strong>Product Gap:</strong> Few competitors offer integrated solution (fertilizers + seeds + tools)</li>
+            <li><strong>Content Gap:</strong> Limited educational content in Arabic about Jordan-specific soil/climate</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 3: TECHNICAL DIAGNOSIS -->
+    <div class="page-break"></div>
+    <h1>3. 🔧 Technical Diagnosis & Action Plan</h1>
+
+    <h2>Current Site Performance Overview</h2>
+    
+    <div class="critical-box">
+        <h3>Mobile Performance: 56/100 (Critical - Must Fix)</h3>
+        <ul>
+            <li><strong>First Contentful Paint:</strong> 6.7s (target: <1.8s)</li>
+            <li><strong>Largest Contentful Paint:</strong> 7.4s (target: <2.5s)</li>
+            <li><strong>Impact:</strong> Mobile users (60%+ of Jordan traffic) experiencing poor experience</li>
+        </ul>
+
+        <h3>Desktop Performance: 76/100 (Needs Improvement)</h3>
+        <ul>
+            <li><strong>First Contentful Paint:</strong> 2.0s (target: <1.0s)</li>
+            <li><strong>Largest Contentful Paint:</strong> 2.0s (acceptable but can improve)</li>
+        </ul>
+    </div>
+
+    <h2>Priority 1: Crawlability & Indexation (CRITICAL - Week 1)</h2>
+    <div class="critical-box">
+        <h3>The Problem</h3>
+        <ul>
+            <li><strong>29 Pages Couldn't Be Crawled:</strong> Blocking Google from indexing valuable content</li>
+            <li><strong>Hreflang Issues:</strong> 185 non-200 hreflang URLs (15.6%) causing language confusion</li>
+            <li><strong>Internal Links Issues:</strong> 1,161 nofollow outlinks (97.9%) not passing PageRank internally</li>
+            <li><strong>Impact:</strong> Limited organic visibility, wasted crawl budget</li>
+        </ul>
+
+        <h3>Action Items (Days 1-7)</h3>
+        <ol>
+            <li><strong>Days 1-2:</strong> Audit and fix 29 uncrawlable pages - remove blocks, fix redirects</li>
+            <li><strong>Days 2-3:</strong> Fix hreflang implementation for 185 affected URLs</li>
+            <li><strong>Days 3-4:</strong> Convert critical internal nofollow links to dofollow (focus on product/category pages)</li>
+            <li><strong>Days 4-5:</strong> Submit updated XML sitemap with all accessible pages</li>
+            <li><strong>Days 5-7:</strong> Monitor Google Search Console for indexation improvements</li>
+        </ol>
+
+        <p><strong>Expected Impact:</strong> +15-20% indexed pages within 2 weeks, improved crawl efficiency</p>
+    </div>
+
+    <h2>Priority 2: Critical Performance Optimization (Week 1-3)</h2>
+    <table>
+        <tr>
+            <th>Issue</th>
+            <th>Current Status</th>
+            <th>Action Required</th>
+            <th>Timeline</th>
+        </tr>
+        <tr>
+            <td>Mobile Performance</td>
+            <td>56/100</td>
+            <td>Image optimization (WebP), lazy loading, minification, CDN</td>
+            <td>14 days</td>
+        </tr>
+        <tr>
+            <td>Desktop Performance</td>
+            <td>76/100</td>
+            <td>Server response optimization, browser caching, resource preloading</td>
+            <td>10 days</td>
+        </tr>
+        <tr>
+            <td>Slow Load Speed</td>
+            <td>21 pages</td>
+            <td>Optimize heavy pages (product pages with multiple images)</td>
+            <td>7 days</td>
+        </tr>
+        <tr>
+            <td>First Contentful Paint (Mobile)</td>
+            <td>6.7s</td>
+            <td>Reduce to <1.8s through critical CSS, font optimization</td>
+            <td>10 days</td>
+        </tr>
+        <tr>
+            <td>Largest Contentful Paint (Mobile)</td>
+            <td>7.4s</td>
+            <td>Reduce to <2.5s through image optimization, server upgrade if needed</td>
+            <td>14 days</td>
+        </tr>
+        <tr>
+            <td>Security Headers (CSP)</td>
+            <td>Missing on 1,732 URLs</td>
+            <td>Implement Content-Security-Policy headers site-wide</td>
+            <td>3 days</td>
+        </tr>
+    </table>
+
+    <h2>Priority 3: On-Page SEO Fixes (Week 2-4)</h2>
+    <div class="highlight-box">
+        <h3>Critical On-Page Issues:</h3>
+        <table>
+            <tr>
+                <th>Issue</th>
+                <th>Pages Affected</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Low Content Pages</td>
+                <td>321 pages (27.1%)</td>
+                <td>Expand thin pages to 800-1,500 words with valuable Arabic content</td>
+            </tr>
+            <tr>
+                <td>Duplicate Page Titles</td>
+                <td>100 pages (8.4%)</td>
+                <td>Create unique, keyword-rich titles for each page</td>
+            </tr>
+            <tr>
+                <td>Missing H1 Tags</td>
+                <td>11 pages (0.9%)</td>
+                <td>Add descriptive H1 tags with target keywords</td>
+            </tr>
+            <tr>
+                <td>H1 Duplicate</td>
+                <td>475 pages (40%)</td>
+                <td>Differentiate H1 tags across similar product pages</td>
+            </tr>
+            <tr>
+                <td>H2 Duplicate</td>
+                <td>940 pages (79.3%)</td>
+                <td>Create unique H2 subheadings for content structure</td>
+            </tr>
+            <tr>
+                <td>Non-Descriptive Anchor Text</td>
+                <td>357 links (30.1%)</td>
+                <td>Replace generic anchors with descriptive Arabic text</td>
+            </tr>
+            <tr>
+                <td>Missing Meta Descriptions</td>
+                <td>221 pages (18.6%)</td>
+                <td>Write compelling 120-155 character descriptions with CTAs</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Priority 4: Structured Data Implementation (Week 3-4)</h2>
+    <ul>
+        <li><strong>Organization Schema:</strong> Company information, logo, social profiles, Jordan address</li>
+        <li><strong>Product Schema:</strong> All fertilizer, seed, pesticide products with prices, availability, reviews</li>
+        <li><strong>FAQPage Schema:</strong> Common questions about products, application, shipping</li>
+        <li><strong>BreadcrumbList Schema:</strong> Navigation hierarchy for all pages</li>
+        <li><strong>WebSite Schema:</strong> Sitelinks search box for brand queries</li>
+    </ul>
+
+    <!-- SECTION 4: CONTENT STRATEGY -->
+    <div class="page-break"></div>
+    <h1>4. 📝 Content & Keyword Strategy</h1>
+
+    <h2>Top 10 Priority Keywords for Jordan Market</h2>
+    <table>
+        <tr>
+            <th>Keyword (Arabic)</th>
+            <th>English Translation</th>
+            <th>Search Volume (Jordan)</th>
+            <th>Commercial Intent</th>
+            <th>Target Page</th>
+        </tr>
+        <tr>
+            <td>سماد 20-20-20</td>
+            <td>Fertilizer 20-20-20</td>
+            <td>800-1,500</td>
+            <td>Very High</td>
+            <td>/npk-20-20-20-fertilizer</td>
+        </tr>
+        <tr>
+            <td>سماد NPK</td>
+            <td>NPK Fertilizer</td>
+            <td>1,000+</td>
+            <td>Very High</td>
+            <td>/npk-fertilizers</td>
+        </tr>
+        <tr>
+            <td>سماد عضوي</td>
+            <td>Organic Fertilizer</td>
+            <td>600-1,200</td>
+            <td>High</td>
+            <td>/organic-fertilizers</td>
+        </tr>
+        <tr>
+            <td>بذور خضراوات</td>
+            <td>Vegetable Seeds</td>
+            <td>500-900</td>
+            <td>High</td>
+            <td>/vegetable-seeds</td>
+        </tr>
+        <tr>
+            <td>مبيد حشري</td>
+            <td>Pesticide/Insecticide</td>
+            <td>700-1,200</td>
+            <td>High</td>
+            <td>/pesticides-insecticides</td>
+        </tr>
+        <tr>
+            <td>سماد يوريا</td>
+            <td>Urea Fertilizer</td>
+            <td>400-800</td>
+            <td>High</td>
+            <td>/urea-fertilizer</td>
+        </tr>
+        <tr>
+            <td>أحماض أمينية</td>
+            <td>Amino Acids</td>
+            <td>300-600</td>
+            <td>High</td>
+            <td>/amino-acid-fertilizers</td>
+        </tr>
+        <tr>
+            <td>هيوميك</td>
+            <td>Humic Acid</td>
+            <td>400-700</td>
+            <td>High</td>
+            <td>/humic-acid-solutions</td>
+        </tr>
+        <tr>
+            <td>بذور أزهار</td>
+            <td>Flower Seeds</td>
+            <td>300-500</td>
+            <td>Medium-High</td>
+            <td>/flower-seeds</td>
+        </tr>
+        <tr>
+            <td>مقص تقليم</td>
+            <td>Pruning Shears</td>
+            <td>200-400</td>
+            <td>High</td>
+            <td>/pruning-shears-tools</td>
+        </tr>
+    </table>
+
+    <h2>Content Production Plan - 90 Days</h2>
+    <table>
+        <tr>
+            <th>Content Type</th>
+            <th>Starter (20K)</th>
+            <th>Growth (30K)</th>
+            <th>Advanced (45K)</th>
+        </tr>
+        <tr>
+            <td><strong>Blog Articles</strong></td>
+            <td>4 articles (1,000-1,200 words)</td>
+            <td>8 articles (1,200-1,500 words)</td>
+            <td>12 articles (1,500-2,000 words)</td>
+        </tr>
+        <tr>
+            <td><strong>Service Pages</strong></td>
+            <td>4 pages</td>
+            <td>8 pages</td>
+            <td>12 pages</td>
+        </tr>
+        <tr>
+            <td><strong>Product Pages</strong></td>
+            <td>8 products (full optimization)</td>
+            <td>15 products</td>
+            <td>25 products</td>
+        </tr>
+        <tr>
+            <td><strong>On-Page Optimization</strong></td>
+            <td>5 priority pages</td>
+            <td>10 pages</td>
+            <td>20 pages</td>
+        </tr>
+        <tr>
+            <td><strong>FAQ Pages</strong></td>
+            <td>2 FAQ sections</td>
+            <td>5 FAQ sections</td>
+            <td>8 FAQ sections</td>
+        </tr>
+        <tr>
+            <td><strong>Category Landing Pages</strong></td>
+            <td>3 pages</td>
+            <td>5 pages</td>
+            <td>8 pages</td>
+        </tr>
+    </table>
+
+    <h2>Content Gap Analysis</h2>
+    <div class="highlight-box">
+        <h3>Missing High-Value Content Opportunities:</h3>
+        <ul>
+            <li><strong>Jordan-Specific Guides:</strong> "أفضل سماد للتربة الأردنية" (Best fertilizer for Jordan soil)</li>
+            <li><strong>Seasonal Content:</strong> Spring planting guides, autumn fertilization schedules</li>
+            <li><strong>How-To Guides:</strong> NPK application rates, organic farming in Jordan, pest control</li>
+            <li><strong>Product Comparison:</strong> NPK 20-20-20 vs other ratios, organic vs chemical</li>
+            <li><strong>Problem-Solution:</strong> Yellow leaves → nitrogen deficiency → our solutions</li>
+            <li><strong>Heritage Story:</strong> "45 years serving Jordan farmers" trust-building content</li>
+            <li><strong>Video Content:</strong> Product application demonstrations, farmer testimonials</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 5: LINK BUILDING -->
+    <div class="page-break"></div>
+    <h1>5. 🔗 Authority & Link Building Plan</h1>
+
+    <h2>Current Backlink Profile Analysis</h2>
+    <div class="critical-box">
+        <h3>Current Status:</h3>
+        <ul>
+            <li><strong>Total Backlinks: 140</strong> from 108 referring domains</li>
+            <li><strong>Authority Score: 16/100</strong> - below market average</li>
+            <li><strong>Link Quality:</strong> Mix of directory links and organic references</li>
+            <li><strong>Opportunity:</strong> Competitors have 200-400+ backlinks; significant growth potential</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h3>⚠️ Important Note: Backlink Packages</h3>
+        <p><strong>Backlink building is offered as a separate service package starting from $200 USD.</strong></p>
+        <p>The SEO strategy packages below focus on technical optimization, content creation, and on-page SEO. Link building can be added as an additional service with the following deliverables:</p>
+        <ul>
+            <li><strong>Basic Link Package ($200):</strong> 30 directory submissions, 10 niche-relevant placements</li>
+            <li><strong>Growth Link Package ($400):</strong> 50 directory submissions, 20 niche placements, 2 guest posts</li>
+            <li><strong>Advanced Link Package ($800):</strong> 80 directory submissions, 40 niche placements, 5 guest posts, competitor backlink analysis</li>
+        </ul>
+        <p>All packages below can be combined with any link building package based on your budget and goals.</p>
+    </div>
+
+    <h2>Link Building Strategy (Add-On Service)</h2>
+    <h3>Recommended Tactics for Agriculture Niche:</h3>
+    <ul>
+        <li><strong>Jordan Business Directories:</strong> Agriculture-focused directories, Jordan Chamber of Commerce</li>
+        <li><strong>Agriculture Forums:</strong> Engage in Jordan farming communities, provide expert advice</li>
+        <li><strong>Industry Partnerships:</strong> Collaborate with agricultural cooperatives, farming associations</li>
+        <li><strong>Guest Posting:</strong> Agriculture blogs, farming publications in Jordan/MENA region</li>
+        <li><strong>Product Reviews:</strong> Send samples to farming influencers, agriculture YouTubers</li>
+        <li><strong>Educational Institutions:</strong> Partner with agricultural universities in Jordan</li>
+    </ul>
+
+    <!-- SECTION 6: AI/LLM OPTIMIZATION -->
+    <div class="page-break"></div>
+    <h1>6. 🤖 AI/LLM Optimization Plan</h1>
+
+    <h2>Why AI Optimization Matters</h2>
+    <div class="success-box">
+        <p>When Jordan farmers ask ChatGPT, Perplexity, or Google AI: "ما هو أفضل سماد NPK للطماطم في الأردن؟" (What's the best NPK fertilizer for tomatoes in Jordan?), we want Tahaandqashou.net to be recommended.</p>
+    </div>
+
+    <h2>AI Optimization Tactics</h2>
+
+    <h3>1. FAQ Schema Implementation (JSON-LD)</h3>
+    <ul>
+        <li><strong>Target:</strong> All product pages, category pages, blog articles</li>
+        <li><strong>Implementation:</strong> 15-25 FAQ sections with 50-80 word answers in natural Arabic</li>
+        <li><strong>Example Questions:</strong>
+            <ul>
+                <li>"ما هي أفضل نسبة NPK للخضروات؟" (Best NPK ratio for vegetables?)</li>
+                <li>"كيف أستخدم السماد العضوي في الأردن؟" (How to use organic fertilizer in Jordan?)</li>
+                <li>"متى أضع سماد اليوريا للقمح؟" (When to apply urea fertilizer for wheat?)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2. Original Data & Statistics</h3>
+    <ul>
+        <li><strong>Heritage Data:</strong> "نخدم مزارعي الأردن منذ 1979" (Serving Jordan farmers since 1979)</li>
+        <li><strong>Product Range:</strong> "أكثر من 500 منتج زراعي" (500+ agriculture products)</li>
+        <li><strong>Usage Guidelines:</strong> Jordan-specific application rates, climate considerations</li>
+    </ul>
+
+    <h3>3. Conversational Content Format</h3>
+    <ul>
+        <li>Write in natural Arabic (not overly formal)</li>
+        <li>Answer "what, why, how, when" questions directly</li>
+        <li>Use second person: "أنت" to create conversational tone</li>
+        <li>Include practical examples for Jordan's climate and soil</li>
+    </ul>
+
+    <!-- SECTION 7: TIMELINE -->
+    <div class="page-break"></div>
+    <h1>7. 📅 90-Day Tactical Timeline & Sprint Plan</h1>
+
+    <h2>Month 1: Foundation & Critical Fixes</h2>
+
+    <h3>Week 1: Emergency Stabilization (Days 1-7)</h3>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Tasks</th>
+            <th>Deliverable</th>
+        </tr>
+        <tr>
+            <td><strong>Day 1-2</strong></td>
+            <td>
+                • Fix 29 uncrawlable pages<br>
+                • Begin mobile performance audit<br>
+                • Connect Google Search Console
+            </td>
+            <td>Site fully crawlable, GSC connected</td>
+        </tr>
+        <tr>
+            <td><strong>Day 3-4</strong></td>
+            <td>
+                • Fix hreflang errors (185 URLs)<br>
+                • Convert internal nofollow links<br>
+                • Implement security headers
+            </td>
+            <td>Hreflang fixed, security improved</td>
+        </tr>
+        <tr>
+            <td><strong>Day 5-7</strong></td>
+            <td>
+                • Submit updated XML sitemap<br>
+                • Begin image optimization<br>
+                • Start keyword research
+            </td>
+            <td>Sitemap submitted, keyword list ready</td>
+        </tr>
+    </table>
+
+    <h3>Week 2-4: Technical Optimization & Content Foundation</h3>
+    <ul>
+        <li><strong>Week 2:</strong> Image optimization (WebP conversion), lazy loading, minification</li>
+        <li><strong>Week 3:</strong> Fix 321 low-content pages, update 100 duplicate titles</li>
+        <li><strong>Week 4:</strong> Create first batch of blog content, optimize product pages</li>
+    </ul>
+
+    <h2>Month 2: Content Expansion & On-Page Optimization</h2>
+    <ul>
+        <li><strong>Week 5-6:</strong> Complete service pages, optimize category landing pages</li>
+        <li><strong>Week 7-8:</strong> Publish blog articles, add FAQ schemas, optimize product descriptions</li>
+    </ul>
+
+    <h2>Month 3: Advanced Optimization & Scale</h2>
+    <ul>
+        <li><strong>Week 9-10:</strong> Advanced schema implementation, conversion optimization</li>
+        <li><strong>Week 11-12:</strong> Final technical audit, performance validation, reporting</li>
+    </ul>
+
+    <!-- SECTION 8: KPIs -->
+    <div class="page-break"></div>
+    <h1>8. 📊 KPIs & Reporting Dashboard</h1>
+
+    <h2>Primary Success Metrics (90-Day Targets)</h2>
+    <table>
+        <tr>
+            <th>KPI</th>
+            <th>Baseline</th>
+            <th>Month 1 Target</th>
+            <th>Month 2 Target</th>
+            <th>Month 3 Target</th>
+        </tr>
+        <tr>
+            <td><strong>Organic Traffic</strong></td>
+            <td>442/month</td>
+            <td>600-750</td>
+            <td>900-1,200</td>
+            <td>1,200-1,800</td>
+        </tr>
+        <tr>
+            <td><strong>Keywords Ranking (Top 100)</strong></td>
+            <td>15</td>
+            <td>35-45</td>
+            <td>60-80</td>
+            <td>80-120</td>
+        </tr>
+        <tr>
+            <td><strong>Top 10 Rankings</strong></td>
+            <td>~5</td>
+            <td>8-12</td>
+            <td>15-20</td>
+            <td>20-30</td>
+        </tr>
+        <tr>
+            <td><strong>Authority Score</strong></td>
+            <td>16</td>
+            <td>18-20</td>
+            <td>22-25</td>
+            <td>25-30</td>
+        </tr>
+        <tr>
+            <td><strong>Mobile Performance</strong></td>
+            <td>56</td>
+            <td>65-70</td>
+            <td>75-80</td>
+            <td>80-85</td>
+        </tr>
+        <tr>
+            <td><strong>Desktop Performance</strong></td>
+            <td>76</td>
+            <td>82-85</td>
+            <td>87-90</td>
+            <td>90-95</td>
+        </tr>
+        <tr>
+            <td><strong>Organic Leads/Inquiries</strong></td>
+            <td>~15/month</td>
+            <td>20-25</td>
+            <td>30-40</td>
+            <td>40-60</td>
+        </tr>
+    </table>
+
+    <h2>Reporting Frequency</h2>
+    <div class="highlight-box">
+        <h3>📧 Weekly Task Reports (Every Monday)</h3>
+        <ul>
+            <li>✅ Tasks completed with dates</li>
+            <li>📄 In-progress work</li>
+            <li>📋 Upcoming priorities</li>
+            <li>🎯 Quick wins achieved</li>
+        </ul>
+
+        <h3>📈 Monthly Performance Reports</h3>
+        <ul>
+            <li>Comprehensive 25-35 page PDF report</li>
+            <li>Traffic, rankings, conversions analysis</li>
+            <li>Technical audit updates</li>
+            <li>Next month strategy</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 9: PACKAGES -->
+    <div class="page-break"></div>
+    <h1>9. 💰 Investment Packages & Pricing</h1>
+
+    <h2>Package 1: Starter - 20,000 EGP / $640 USD per Month</h2>
+    <div class="highlight-box">
+        <h3>🎯 Best For:</h3>
+        <p>Small to medium agriculture businesses needing critical technical fixes and content foundation</p>
+        
+        <h3>✅ Included Services:</h3>
+        <table>
+            <tr>
+                <th style="width: 35%;">Service Category</th>
+                <th>Deliverables</th>
+            </tr>
+            <tr>
+                <td><strong>🔧 Technical SEO</strong></td>
+                <td>
+                    • Fix 29 uncrawlable pages<br>
+                    • GSC setup & sitemap submission<br>
+                    • Fix hreflang errors (185 URLs)<br>
+                    • Security headers implementation<br>
+                    • Basic Core Web Vitals optimization<br>
+                    • Mobile responsive check & fixes
+                </td>
+            </tr>
+            <tr>
+                <td><strong>📝 On-Page SEO</strong></td>
+                <td>
+                    • <strong>5 priority pages optimization</strong><br>
+                    • Fix 100 duplicate titles<br>
+                    • Add 11 missing H1 tags<br>
+                    • Optimize 321 low-content pages (top 50)<br>
+                    • Image alt text optimization<br>
+                    • Meta description updates
+                </td>
+            </tr>
+            <tr>
+                <td><strong>📄 Content Creation</strong></td>
+                <td>
+                    • <strong>4 blog articles</strong> (1,000-1,200 words, Arabic)<br>
+                    • <strong>4 service pages</strong> (fertilizers, seeds, pesticides, tools)<br>
+                    • <strong>8 product pages</strong> full optimization<br>
+                    • 2 FAQ sections with schema<br>
+                    • 3 category landing pages
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🗂️ Structured Data</strong></td>
+                <td>
+                    • Organization schema<br>
+                    • Product schema (8 products)<br>
+                    • FAQPage schema (2 pages)<br>
+                    • BreadcrumbList schema
+                </td>
+            </tr>
+            <tr>
+                <td><strong>📊 Reporting</strong></td>
+                <td>
+                    • <strong>Weekly task reports</strong> (email)<br>
+                    • <strong>Monthly performance reports</strong> (PDF)<br>
+                    • Email & WhatsApp support (24-48hr response)
+                </td>
+            </tr>
+        </table>
+
+        <h3>📊 Expected Results (3 Months):</h3>
+        <ul>
+            <li>Organic traffic: <strong>900-1,200/month</strong> (+100-170% increase)</li>
+            <li>Keywords ranking: <strong>50-70 keywords</strong></li>
+            <li>Top 10 rankings: <strong>12-18 keywords</strong></li>
+            <li>Authority Score: <strong>20-24</strong></li>
+            <li>Mobile performance: <strong>70-75</strong></li>
+            <li>Desktop performance: <strong>85-88</strong></li>
+        </ul>
+
+        <p><strong>💳 Investment:</strong> 20,000 EGP/month ($640 USD) × 3 months = <strong>60,000 EGP ($1,920 USD) total</strong></p>
+    </div>
+
+    <h2>Package 2: Growth - 30,000 EGP / $960 USD per Month ⭐ RECOMMENDED</h2>
+    <div class="success-box">
+        <h3>🎯 Best For:</h3>
+        <p>Serious agriculture businesses seeking market leadership, consistent leads, and comprehensive optimization</p>
+        
+        <h3>✅ Everything in Starter, PLUS:</h3>
+        <table>
+            <tr>
+                <th style="width: 35%;">Service Category</th>
+                <th>Additional Deliverables</th>
+            </tr>
+            <tr>
+                <td><strong>🔧 Advanced Technical SEO</strong></td>
+                <td>
+                    • <strong>Complete Core Web Vitals optimization</strong><br>
+                    • CDN deployment for Jordan<br>
+                    • Advanced image optimization (WebP, lazy loading)<br>
+                    • Code minification & bundling<br>
+                    • Target: Mobile 80+, Desktop 90+
+                </td>
+            </tr>
+            <tr>
+                <td><strong>📝 Enhanced On-Page SEO</strong></td>
+                <td>
+                    • <strong>10 pages optimization</strong> (vs 5 in Starter)<br>
+                    • Fix all 321 low-content pages<br>
+                    • Advanced internal linking strategy<br>
+                    • Conversion rate optimization
+                </td>
+            </tr>
+            <tr>
+                <td><strong>📄 Premium Content Creation</strong></td>
+                <td>
+                    • <strong>8 blog articles</strong> (1,200-1,500 words, vs 4)<br>
+                    • <strong>8 service pages</strong> (vs 4)<br>
+                    • <strong>15 product pages</strong> (vs 8)<br>
+                    • 5 FAQ sections (vs 2)<br>
+                    • 5 category landing pages<br>
+                    • 2 pillar content pieces (2,000+ words)
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🗂️ Advanced Structured Data</strong></td>
+                <td>
+                    • All Starter schemas<br>
+                    • Product schema (15 products)<br>
+                    • FAQPage schema (5 pages)<br>
+                    • HowTo schema for guides<br>
+                    • Review/Rating schema
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🤖 AI/LLM Optimization</strong></td>
+                <td>
+                    • FAQ schema with conversational answers<br>
+                    • Voice search optimization<br>
+                    • Featured snippet targeting<br>
+                    • Entity consistency optimization
+                </td>
+            </tr>
+        </table>
+
+        <h3>📊 Expected Results (3 Months):</h3>
+        <ul>
+            <li>Organic traffic: <strong>1,200-1,800/month</strong> (+170-300% increase)</li>
+            <li>Keywords ranking: <strong>80-120 keywords</strong></li>
+            <li>Top 10 rankings: <strong>20-30 keywords</strong></li>
+            <li>Authority Score: <strong>25-30</strong></li>
+            <li>Mobile performance: <strong>80-85</strong></li>
+            <li>Desktop performance: <strong>90-95</strong></li>
+            <li>Featured snippets: <strong>3-5 owned</strong></li>
+        </ul>
+
+        <p><strong>💳 Investment:</strong> 30,000 EGP/month ($960 USD) × 3 months = <strong>90,000 EGP ($2,880 USD) total</strong></p>
+    </div>
+
+    <h2>Package 3: Advanced - 45,000 EGP / $1,440 USD per Month</h2>
+    <div class="critical-box">
+        <h3>🎯 Best For:</h3>
+        <p>Market leaders seeking complete market dominance, maximum visibility, and aggressive growth in Jordan agriculture market</p>
+        
+        <h3>✅ Everything in Growth, PLUS:</h3>
+        <table>
+            <tr>
+                <th style="width: 35%;">Service Category</th>
+                <th>Premium Deliverables</th>
+            </tr>
+            <tr>
+                <td><strong>📄 Premium Content Suite</strong></td>
+                <td>
+                    • <strong>12 blog articles</strong> (1,500-2,000 words)<br>
+                    • <strong>12 service pages</strong><br>
+                    • <strong>25 product pages</strong><br>
+                    • <strong>20 pages optimization</strong><br>
+                    • 8 FAQ sections<br>
+                    • 8 category landing pages<br>
+                    • 4 pillar content pieces (2,500+ words)<br>
+                    • Video content scripts (3-5 videos)
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🔧 Enterprise Technical SEO</strong></td>
+                <td>
+                    • Advanced schema testing & optimization<br>
+                    • Custom technical audits monthly<br>
+                    • Target: 90+ mobile, 95+ desktop scores<br>
+                    • Advanced site speed optimization
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🤖 Advanced AI Strategy</strong></td>
+                <td>
+                    • Original research data publication<br>
+                    • Voice search dominance strategy<br>
+                    • Target 8-12 featured snippets<br>
+                    • Knowledge Graph optimization
+                </td>
+            </tr>
+            <tr>
+                <td><strong>🎯 Conversion Optimization</strong></td>
+                <td>
+                    • A/B testing setup<br>
+                    • Heatmap analysis<br>
+                    • CRO implementation<br>
+                    • Lead scoring consultation
+                </td>
+            </tr>
+        </table>
+
+        <h3>📊 Expected Results (3 Months):</h3>
+        <ul>
+            <li>Organic traffic: <strong>2,000-3,000/month</strong> (+350-580% increase)</li>
+            <li>Keywords ranking: <strong>150-200 keywords</strong></li>
+            <li>Top 10 rankings: <strong>35-50 keywords</strong></li>
+            <li>Authority Score: <strong>28-35</strong></li>
+            <li>Mobile performance: <strong>90+</strong></li>
+            <li>Desktop performance: <strong>95+</strong></li>
+            <li>Featured snippets: <strong>10-15 owned</strong></li>
+            <li>Market share: <strong>Top 3 for competitive keywords</strong></li>
+        </ul>
+
+        <p><strong>💳 Investment:</strong> 45,000 EGP/month ($1,440 USD) × 3 months = <strong>135,000 EGP ($4,320 USD) total</strong></p>
+    </div>
+
+    <h2>📋 Package Comparison Matrix</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Starter<br>60K EGP</th>
+            <th>Growth ⭐<br>90K EGP</th>
+            <th>Advanced<br>135K EGP</th>
+        </tr>
+        <tr>
+            <td><strong>Blog Articles</strong></td>
+            <td>4 articles</td>
+            <td>8 articles</td>
+            <td>12 articles</td>
+        </tr>
+        <tr>
+            <td><strong>Service Pages</strong></td>
+            <td>4 pages</td>
+            <td>8 pages</td>
+            <td>12 pages</td>
+        </tr>
+        <tr>
+            <td><strong>Product Optimization</strong></td>
+            <td>8 products</td>
+            <td>15 products</td>
+            <td>25 products</td>
+        </tr>
+        <tr>
+            <td><strong>On-Page Optimization</strong></td>
+            <td>5 pages</td>
+            <td>10 pages</td>
+            <td>20 pages</td>
+        </tr>
+        <tr>
+            <td><strong>Technical SEO</strong></td>
+            <td>✅ Complete</td>
+            <td>✅ Advanced</td>
+            <td>✅ Enterprise</td>
+        </tr>
+        <tr>
+            <td><strong>Core Web Vitals</strong></td>
+            <td>Basic (70-75 mobile)</td>
+            <td>✅ Complete (80+ mobile)</td>
+            <td>✅ Advanced (90+ mobile)</td>
+        </tr>
+        <tr>
+            <td><strong>Expected Traffic Increase</strong></td>
+            <td>+100-170%</td>
+            <td>+170-300%</td>
+            <td>+350-580%</td>
+        </tr>
+    </table>
+
+    <!-- CONTACT & APPENDIX -->
+    <div class="page-break"></div>
+    <h1>10. 📎 Appendix: Technical Audit Details</h1>
+
+    <h2>A. SEMrush Site Audit Summary</h2>
+    <table>
+        <tr>
+            <th>Issue Category</th>
+            <th>Errors</th>
+            <th>Warnings</th>
+            <th>Priority</th>
+        </tr>
+        <tr>
+            <td>Crawlability</td>
+            <td>29</td>
+            <td>-</td>
+            <td><span class="status-badge badge-critical">CRITICAL</span></td>
+        </tr>
+        <tr>
+            <td>Site Performance</td>
+            <td>21</td>
+            <td>-</td>
+            <td><span class="status-badge badge-critical">CRITICAL</span></td>
+        </tr>
+        <tr>
+            <td>Hreflang</td>
+            <td>2</td>
+            <td>-</td>
+            <td><span class="status-badge badge-high">HIGH</span></td>
+        </tr>
+        <tr>
+            <td>Internal Linking</td>
+            <td>-</td>
+            <td>4,003</td>
+            <td><span class="status-badge badge-medium">MEDIUM</span></td>
+        </tr>
+        <tr>
+            <td>Content Quality</td>
+            <td>-</td>
+            <td>321</td>
+            <td><span class="status-badge badge-high">HIGH</span></td>
+        </tr>
+        <tr>
+            <td>On-Page Issues</td>
+            <td>-</td>
+            <td>Multiple</td>
+            <td><span class="status-badge badge-high">HIGH</span></td>
+        </tr>
+    </table>
+
+    <h2>B. Screaming Frog Crawl Data</h2>
+    <p><strong>Total URLs Crawled:</strong> 1,186 pages</p>
+    <p><strong>Response Codes:</strong></p>
+    <ul>
+        <li>200 OK: Majority of pages</li>
+        <li>Blocked by robots.txt: 1 URL (0.04%)</li>
+        <li>Internal nofollow outlinks: 1,161 (97.9%)</li>
+    </ul>
+
+    <!-- CONTACT -->
+    <div class="page-break"></div>
+    <h1>📞 Contact & Next Steps</h1>
+
+    <div class="success-box" style="text-align: center; padding: 40px;">
+        <h2 style="font-size: 1.8em; margin-bottom: 20px; color: #2d5016;">Ready to Dominate Jordan Agriculture Market?</h2>
+        
+        <p style="font-size: 1.3em; margin: 20px 0;"><strong>Safaa Abdou</strong></p>
+        <p style="font-size: 1.1em; color: #3d6b1f;">Technical SEO & Automation Engineer</p>
+        <p style="font-size: 0.95em; margin-top: 5px;">Specialized in E-commerce & Agriculture Niche</p>
+        
+        <div style="margin: 35px 0; line-height: 2.2; font-size: 1.05em;">
+            <p><strong>📧 Email:</strong> safaa@seopexflow.com</p>
+            <p><strong>📱 WhatsApp:</strong> +20 15 00605866</p>
+            <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/safaa-abdou-technical-seo-and-seo-automation-engineer/" style="color: #2d5016; text-decoration: none; border-bottom: 2px solid #5a8c2e;" target="_blank">linkedin.com/in/safaa-abdou</a></p>
+        </div>
+
+        <p style="font-size: 0.95em; margin-top: 30px; color: #555;">
+            <strong>Response Time:</strong> Within 24 hours<br>
+            <strong>Free Consultation:</strong> 30-minute strategy call for qualified leads
+        </p>
+    </div>
+
+    <h2>📅 How to Get Started</h2>
+    <div class="highlight-box">
+        <h3>Simple 4-Step Process:</h3>
+        <ol style="font-size: 1.05em; line-height: 2;">
+            <li><strong>Contact Us:</strong> Reach out via WhatsApp, email, or LinkedIn</li>
+            <li><strong>Free Consultation:</strong> 30-minute call to discuss goals and answer questions</li>
+            <li><strong>Package Selection:</strong> Choose package that fits your budget (add-on backlinks if desired)</li>
+            <li><strong>Kickoff:</strong> We begin work within 24-48 hours</li>
+        </ol>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 25px; border-top: 3px solid #5a8c2e; text-align: center; color: #666; font-size: 0.9em;">
+        <p style="font-size: 1.1em; color: #1a1a1a; margin-bottom: 10px;"><strong>Tahaandqashou.net SEO Strategy Report</strong></p>
+        <p>Prepared by Safaa Abdou | January 2026 | Confidential Document</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">This report contains proprietary methodologies and strategic recommendations.<br>Unauthorized distribution is prohibited.</p>
+        
+        <div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <p style="color: #2d5016; font-weight: 600; margin-bottom: 8px;">🌱 Special Note for Tahaandqashou Team</p>
+            <p style="font-size: 0.9em; line-height: 1.7;">
+                With 45 years of heritage (since 1979), you have a unique competitive advantage in Jordan's agriculture market. This strategy leverages your trust and expertise to achieve market leadership. The agriculture niche shows excellent growth potential with moderate competition—perfect timing for aggressive SEO investment.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
